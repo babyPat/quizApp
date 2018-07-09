@@ -1,3 +1,142 @@
-page-home {
+ion-content{
+        background-image: url(../../assets/imgs/world3.jpg);
+        background-repeat: no-repeat;
+        height:100;
+        background-position: center;
+        background-size:cover;
+}
+
+// ion-content{
+
+    // background:rgb(238, 160, 15)!important;
+// }
+
+.myQ,.total{
+
+    font-size: 60px;
+    font-style: oblique;
+    text-align: center;
+}
+
+.myq{
+    font-size: 13px;
+    color: rgb(12, 11, 11);
+}
+
+#par p{
+
+    text-align: center;
+    font-size: 20px;
+    color: black;
+   
+}
+
+.cateA,.cateC,.cateB{
+
+//    background-color: rgb(214, 133, 27);
+   border-radius: 10px;
+    padding: 5px;
+    font-size: 15px;
+    color: black;
+}
+
+#goryA, .goryC, .goryB{
+
+    font-size: 20px;
+}
+
+.mee, .dee1, .duu1, .daa, .doo, .gaa1, .gee2, .gii1,.goo1,.guu1,.mba1,.pat,.rat1,.can,.gugu1{
+
+    color: rgb(34, 226, 34);
+    background-color: white;
+    font-size: 20px;
+    
+}
+
+.mee1, .dee, .duu, .daa1, .doo1, .gaa, .gaa2, .gee, .gee1, .gii2, .gii,.goo,.goo2,.guu,.guu2,.mba,.mba2,.pat1,.pat2,.rat,.rat2,.cand1,.cand2,.gug,.gugu2{
+    color: rgb(245, 23, 23);
+    background-color: white;
+    font-size: 20px;
+}
+
+.sub button ion-button{
+
+     text-align: center;
+}
+
+.total{
+
+    text-align: center;
+    font-size: 50px;
+    top: 300px;
+    padding: 20px;
+}
+
+
+
+button[id="btn"]{
+    margin-right: 120px;
+    margin-left: 120px;
+
+    font-size: 20px;
+    background-color: rgb(6, 99, 6);
+}
+
+
+button[id="btn1"],[id=btn3],[id="btn5"]{
+    margin-right: 60px;
+    margin-left: 60px;
+
+    font-size: 20px;
+    background-color: rgb(6, 99, 6);
+}
+
+
+button[id="btn2"]{
+    
+    
+    font-size: 20px;
+    background-color: rgb(6, 99, 6);
+}
+
+button[id="btn4"],[id="btn6"]{
+
+    background-color:  rgb(6, 99, 6);
+}
+
+.failer{
+
+    color: red;
+}
+.pass{
+
+    color: green;
+}
+
+img[id="pic"]{
+
+    margin-right: 140px;
+    margin-left: 140px;
+
+}
+
+.nako,.nako1,.nako2{
+ font-size: 15px;
+ text-align: center;
+ color:yellow;
+}
+
+.finishedTime{
+
+    font-size: 15px;
+    color: yellow;
+}
+
+button[id="btn8"]{
+    margin-right: 150px;
+    margin-left: 150px;
+
+    font-size: 20px;
+    background-color: rgb(6, 99, 6);
 
 }

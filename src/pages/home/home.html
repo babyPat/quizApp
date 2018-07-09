@@ -1,14 +1,697 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color ="green" >
+    <ion-title >
+      QUIZ
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content >
+
+      
+     <div *ngIf="page0">
+
+       
+       <div class="myQ">
+      <p>QUIZ TIME  LET'S HAVE FUN</p> 
+      <div class="myq">   
+    <p>take our 15 question quiz, you'll have 60 seconds to complete all the questions. check your score in each and every category after taking the test and your total score will appear at the end of your test</p>
+  </div> 
+  </div>
+        <button ion-button id="btn" color="light"   (click)= "Next0()" >START THE QUIZ</button>
+
+     </div>
+     <br> <br>
+
+       <img src="../../assets/imgs/w9.PNG" id="pic">
+     
+    
+<!--  -->
+
+    <div *ngIf="page1">
+     
+    <div id="goryA" style="text-align: center">
+  <p>CATEGORY A</p>
+</div>  
+
+<div class="nako">  
+    Timer:  {{timerVal}}
+  </div>
+
+
+<div id="sco" style="text-align: center">
+    <h1> ScoreA:{{scoreA}}</h1>
+   </div>
+
+  <div class="cateA"> 
+     
+
+     <p> 1.Brazil has won more World Cup (soccer) championships than any other country?</p>
+
+     
+    <ion-item>
+        <ion-label>True</ion-label>
+        <ion-checkbox [(ngModel)] ="yes"   checked= "false"></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>False</ion-label>
+        <ion-checkbox [(ngModel)] ="no"  checked= "false" ></ion-checkbox>
+      </ion-item>
+
+      
+      <div *ngIf="summary">
+
+          <div class ="mee"> 
+          {{yes}} <br>
+        </div>
+    
+        <div class="mee1">
+          {{no}} <br> 
+        
+        </div>
+
+      </div>
+      
+
+
+
+    <p>2.  Vittorio Mabuza was the only manager to win the FIFA World Cup twice? </p>
+         
+    <ion-item>
+        <ion-label>True</ion-label>
+        <ion-checkbox [(ngModel)] ="yes1"   checked= "false"></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>False</ion-label>
+        <ion-checkbox [(ngModel)] ="no1"  checked= "false" ></ion-checkbox>
+      </ion-item>
+
+      
+      <div *ngIf="summary1">
+
+          <div class="dee"> 
+          {{yes1}} <br>
+        </div>
+ 
+        <div class="dee1">
+          {{no1}} <br> 
+        </div>
+
+        </div>
+
+      
+
+      <p>3. Messi scored the highest number of total goals in FIFA World Cup Finals tournaments from 1930 to 2010?</p>
+
+              
+    <ion-item>
+        <ion-label>True</ion-label>
+        <ion-checkbox [(ngModel)] ="yes2"   checked= "false"></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>False</ion-label>
+        <ion-checkbox [(ngModel)] ="no2"  checked= "false" ></ion-checkbox>
+      </ion-item>
+
+      
+      <div *ngIf="summary2">
+
+        <div class="duu">
+          {{yes2}} <br>
+        </div>
+        
+         <div class="duu1">
+          {{no2}} <br> 
+        </div>
+        
+        </div>
+
+      
+
+
+      <p>4. Gemarny has conceded over 100 goals in World Cup Finals matches? </p>
+
+
+               
+    <ion-item>
+        <ion-label>True</ion-label>
+        <ion-checkbox [(ngModel)] ="yes3"   checked= "false"></ion-checkbox>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label>False</ion-label>
+        <ion-checkbox [(ngModel)] ="no3"  checked= "false" ></ion-checkbox>
+      </ion-item>
+
+      
+      <div *ngIf="summary3">
+
+        <div class="daa">
+          {{yes3}} <br>
+        </div>
+
+        <div class="daa1">
+          {{no3}} <br> 
+        </div>
+
+        </div>
+
+      
+
+
+      <p>5.Kenny Sansom was one of the nine players who were affiliated to London clubs in England's 1986 World Cup Finals squad?  </p>
+
+                
+    <ion-item>
+      <ion-label>True</ion-label>
+      <ion-checkbox [(ngModel)] ="yes4"   checked= "false"></ion-checkbox>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>False</ion-label>
+      <ion-checkbox [(ngModel)] ="no4"  checked= "false" ></ion-checkbox>
+    </ion-item>
+
+    
+    <div *ngIf="summary4">
+
+      <div class="doo">
+        {{yes4}} <br>
+      </div>
+       
+      <div class="doo1">
+        {{no4}} <br> 
+      </div>
+      </div>
+
+      <br>
+
+      
+      <button ion-button  id="btn1" color="light"   (click)= "submit()" >submit</button>
+       
+
+      <button ion-button id= "btn2" color="light"   (click)= "Next()" >Next Category</button>
+    
+    </div>
+
+  </div>
+
+ <!-- ------------------------------------------------------------------------------------- -->
+
+
+    <div *ngIf="page2">
+       
+     <div class="goryB"  style="text-align: center">
+     <p>CATEGORY B</p>
+     </div>
+
+     <div class="nako1">
+        Timer  {{timerVal}}
+      </div>
+
+     <div id="sco1" style="text-align: center">
+        <h1> ScoreB:{{scoreB}}</h1>
+       </div>
+
+      
+     <div class="cateB">
+       
+
+
+        
+
+      <p> 1.Which team has the most trophies?</p>
+
+      
+       <img src="../../assets/imgs/agentina.jpg" > <img src="../../assets/imgs/brazil.jpg"> <img src="../../assets/imgs/france.jpg">
+   
+   
+   
+      <ion-item>
+          <ion-label>Argentina</ion-label>
+          <ion-checkbox [(ngModel)] ="th"   checked= "false"></ion-checkbox>
+        </ion-item>
+
+       
+      
+        <ion-item>
+          <ion-label>Brazil</ion-label>
+          <ion-checkbox [(ngModel)] ="th1"  checked= "false" ></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>France</ion-label>
+            <ion-checkbox [(ngModel)] ="th2"  checked= "false" ></ion-checkbox>
+          </ion-item>
+  
+        <div *ngIf="themb">
+
+            <div class="mba">
+            {{th}} <br>
+          </div>
+
+          <div class="mba1">
+            {{th1}} <br> 
+          </div>
+
+          <div class="mba2">
+            {{th2}} <br> 
+          </div>
+
+          </div>
+  
+        
+  
+  
+  
+      <p>2. Who was the Winner of the first world cup ?</p>
+
+      <img src="../../assets/imgs/uruguay.jpg" > <img src="../../assets/imgs/agentina.jpg"> <img src="../../assets/imgs/brazil.jpg">
+           
+      <ion-item>
+          <ion-label>Uruguary</ion-label>
+          <ion-checkbox [(ngModel)] ="pd"   checked= "false"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Argentina</ion-label>
+          <ion-checkbox [(ngModel)] ="pd1"  checked= "false" ></ion-checkbox>
+        </ion-item>
+
+                
+      <ion-item>
+          <ion-label>Brazil</ion-label>
+          <ion-checkbox [(ngModel)] ="pd2"   checked= "false"></ion-checkbox>
+        </ion-item>
+      
+  
+        
+        <div *ngIf="patri">
+
+            <div class="pat">
+            {{pd}} <br>
+          </div>
+
+          <div class="pat1">
+            {{pd1}} <br> 
+          </div>
+
+          <div class="pat2">
+            {{pd2}} <br> 
+          </div>
+
+          </div>
+  
+        
+  
+        <p>3. How many different cities will the 64 matches by played in, 2018?</p>
+        <img src="../../assets/imgs/8teen.PNG" > <img src="../../assets/imgs/leven.PNG"> <img src="../../assets/imgs/twelve.PNG">
+                
+      <ion-item>
+          <ion-label>18</ion-label>
+          <ion-checkbox [(ngModel)] ="ra"   checked= "false"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>11</ion-label>
+          <ion-checkbox [(ngModel)] ="ra1"  checked= "false" ></ion-checkbox>
+        </ion-item>
+
+                  
+      <ion-item>
+          <ion-label>12</ion-label>
+          <ion-checkbox [(ngModel)] ="ra2"   checked= "false"></ion-checkbox>
+        </ion-item>
+  
+        
+        <div *ngIf="rato">
+
+            <div class="rat">
+            {{ra}} <br>
+          </div>
+
+          <div class="rat1">
+            {{ra1}} <br> 
+          </div>
+
+          <div class="rat2">
+            {{ra2}} <br> 
+          </div>
+          </div>
+  
+        
+  
+  
+        <p>4.Which teams from the CONCACAF section qualified for the 2018 world cup.?</p>
+  
+        <img src="../../assets/imgs/mexico.jpg" > <img src="../../assets/imgs/usa.png"> <img src="../../assets/imgs/costa rica.jpg">
+                 
+      <ion-item>
+          <ion-label> Mexico</ion-label>
+          <ion-checkbox [(ngModel)] ="ca"   checked= "false"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label> USA</ion-label>
+          <ion-checkbox [(ngModel)] ="ca1"  checked= "false" ></ion-checkbox>
+        </ion-item>
+
+                  
+      <ion-item>
+          <ion-label>Costa Rica</ion-label>
+          <ion-checkbox [(ngModel)] ="ca2"   checked= "false"></ion-checkbox>
+        </ion-item>
+  
+        
+        <div *ngIf="cand">
+
+          <div class="can">
+            {{ca}} <br>
+
+          </div>
+
+          <div class="cand1">
+            {{ca1}} <br> 
+          </div>
+
+          <div class="cand2">
+            {{ca2}} <br>
+          </div>
+          </div>
+  
+        
+  
+  
+        <p>5. When was the first world cup tornament held?</p>
+  
+        <img src="../../assets/imgs/calender.jpg">
+   
+                 
+        <ion-item>
+          <ion-label>June 30th 1930 </ion-label>
+          <ion-checkbox [(ngModel)] ="gu"   checked= "false"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label> July 30th 1930</ion-label>
+          <ion-checkbox [(ngModel)] ="gu1"  checked= "false" ></ion-checkbox>
+        </ion-item>
+
+                  
+      <ion-item>
+          <ion-label>July 30th 1931</ion-label>
+          <ion-checkbox [(ngModel)] ="gu2"   checked= "false"></ion-checkbox>
+        </ion-item>
+  
+        
+        <div *ngIf="gugu">
+
+          <div class="gug">
+            {{gu}} <br>
+          </div>
+
+          <div class="gugu1">
+            {{gu1}} <br> 
+          </div>
+          <div class="gugu2">
+            {{gu2}} <br> 
+            </div>
+          </div>
+            
+          <br>
+          
+      
+          <button ion-button  id="btn3" color="light"   (click)= "submit1()" >submit1</button>
+          <button ion-button id= "btn4" color="light"   (click)= "Next1()" >Next Category</button>
+          
+      
+       
+      
+      </div>
+           
+</div>
+
+
+
+
+
+    
+  
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+    
+<div *ngIf="page3">
+   
+     <div class="goryC" style="text-align: center"> 
+<p>CATEGORY C</p>
+</div>  
+
+<div class="nako2">
+    Timer  {{timerVal}}
+  </div>
+
+<div id="sco" style="text-align: center">
+    <h1> ScoreC:{{scoreC}}</h1>
+   </div>
+   
+     <div class="cateC">
+       
+
+
+        
+
+        <p> 1.What is the minimum number of players per team that FIFA allows during a football game?</p>
+
+          <img src="../../assets/imgs/six.PNG" > <img src="../../assets/imgs/seven.PNG"> <img src="../../assets/imgs/eight.PNG">
+        <ion-item>
+            <ion-label>6 players</ion-label>
+            <ion-checkbox [(ngModel)] ="ans"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>7 players</ion-label>
+            <ion-checkbox [(ngModel)] ="ans1"  checked= "false" ></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>8 players</ion-label>
+              <ion-checkbox [(ngModel)] ="ans2"  checked= "false" ></ion-checkbox>
+            </ion-item>
+    
+          <div *ngIf="question">
+
+              <div class="gaa">
+              {{ans}} <br>
+            </div>
+
+            <div class="gaa1">
+              {{ans1}} <br> 
+            </div>
+
+            <div class="gaa2">
+              {{ans2}} <br> 
+            </div>
+
+            </div>
+    
+          
+    
+    
+    
+        <p>2. What is the distance between the penalty mark and the goal?  </p>
+
+         <img src="../../assets/imgs/meters.PNG">
+             
+        <ion-item>
+            <ion-label>10 yard(9.23 meter)</ion-label>
+            <ion-checkbox [(ngModel)] ="answer"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>11 yard(10.06 meter)</ion-label>
+            <ion-checkbox [(ngModel)] ="answer1"  checked= "false" ></ion-checkbox>
+          </ion-item>
+
+                  
+        <ion-item>
+            <ion-label>12 yard(10.97)</ion-label>
+            <ion-checkbox [(ngModel)] ="answer2"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+    
+          
+          <div *ngIf="question1">
+
+              <div class="gee">
+              {{answer}} <br>
+            </div>
+
+            <div class="gee1">
+              {{answer1}} <br> 
+            </div>
+
+            <div class="gee2">
+              {{answer2}} <br> 
+            </div>
+
+            </div>
+    
+          
+    
+          <p>3. Which law is not one of the 17 individual FIFA laws of the game?</p>
+           
+          <img src="../../assets/imgs/goal kick.PNG" >  <img src="../../assets/imgs/yellow and red.PNG" >  <img src="../../assets/imgs/start and replay.PNG" >
+                  
+        <ion-item>
+            <ion-label>The Goal Kick</ion-label>
+            <ion-checkbox [(ngModel)] ="lev"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Yellow and red card</ion-label>
+            <ion-checkbox [(ngModel)] ="lev1"  checked= "false" ></ion-checkbox>
+          </ion-item>
+
+                    
+        <ion-item>
+            <ion-label> The Start and Restart of Play</ion-label>
+            <ion-checkbox [(ngModel)] ="lev2"   checked= "false"></ion-checkbox>
+          </ion-item>
+    
+          
+          <div *ngIf="question1">
+
+              <div class="gii">
+              {{lev}} <br>
+            </div>
+
+            <div class="gii1">
+              {{lev1}} <br> 
+            </div>
+
+            <div class="gii2">
+              {{lev2}} <br> 
+            </div>
+            </div>
+    
+          
+    
+    
+          <p>4.What is the penalty for a player who spit on an opponent? </p>
+    
+         <img src="../../assets/imgs/yellow and red.PNG"> <img src="../../assets/imgs/red card.PNG">
+                   
+        <ion-item>
+            <ion-label> Red card if the spit hits the player, yellow card if not</ion-label>
+            <ion-checkbox [(ngModel)] ="level"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label> An automatic red card</ion-label>
+            <ion-checkbox [(ngModel)] ="level1"  checked= "false" ></ion-checkbox>
+          </ion-item>
+
+                    
+        <ion-item>
+            <ion-label>The referee has the discretion of the sanction</ion-label>
+            <ion-checkbox [(ngModel)] ="level2"   checked= "false"></ion-checkbox>
+          </ion-item>
+    
+          
+          <div *ngIf="question3">
+
+            <div class="goo">
+              {{level}} <br>
+
+            </div>
+
+            <div class="goo1">
+              {{level1}} <br> 
+            </div>
+
+            <div class="goo2">
+              {{level2}} <br>
+            </div>
+            </div>
+    
+          
+    
+    
+          <p>5. A defending player kicks the soccer ball, it hits the referee and goes inside the goal. What is the appropriate restart? </p>
+    
+        
+          <img src="../../assets/imgs/drop ball.PNG">  <img src="../../assets/imgs/goal kick.PNG"><img src="../../assets/imgs/kick.PNG">
+                   
+          <ion-item>
+            <ion-label> Drop ball where the ball hit the referee </ion-label>
+            <ion-checkbox [(ngModel)] ="level4"   checked= "false"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Goal kick </ion-label>
+            <ion-checkbox [(ngModel)] ="level5"  checked= "false" ></ion-checkbox>
+          </ion-item>
+
+                    
+        <ion-item>
+            <ion-label>Kick-off</ion-label>
+            <ion-checkbox [(ngModel)] ="level6"   checked= "false"></ion-checkbox>
+          </ion-item>
+    
+          
+          <div *ngIf="question4">
+
+            <div class="guu">
+              {{level4}} <br>
+            </div>
+
+            <div class="guu1">
+              {{level5}} <br> 
+            </div>
+            <div class="guu2">
+              {{level6}} <br> 
+              </div>
+            </div>
+
+            
+        <div class= "sub2">
+            <button ion-button id="btn5" color="light"   (click)= "submit2()" >submit2</button>
+
+            <button ion-button id="btn6" color="light"   (click)= "Next2()" > Total Score</button>
+          </div>
+         
+        
+        </div>
+             
+</div>
+
+
+
+
+     <div  *ngIf="page4">   
+       <div class="total">
+         <div *ngIf="message">
+            <div class="finishedTime">
+           You have finished your test in {{timerVal}} seconds
+          </div>
+          <div class="pass">
+           {{Passed}}
+          </div>
+
+          <div class="failer">
+           {{Fail}}
+          </div>
+           <br> 
+         </div>
+      YOUR TOTAL SCORE IS: <br>{{Overal}} /15
+    </div>
+     
+    <button ion-button id="btn8" color="light"   (click)= "submit4()" >Back</button>
+  
+     </div>
 </ion-content>
